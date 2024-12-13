@@ -9,7 +9,7 @@ import 'routes.dart';
 
 class EnvironmentsBadge extends StatelessWidget {
   final Widget child;
-  EnvironmentsBadge({required this.child});
+  const EnvironmentsBadge({super.key, required this.child});
   @override
   Widget build(BuildContext context) {
     var env = ConfigEnvironments.getEnvironments()['env'];
@@ -30,6 +30,31 @@ class Nav {
       name: Routes.HOME,
       page: () => const HomeScreen(),
       binding: HomeControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.SPLASH,
+      page: () => const SplashScreen(),
+      binding: SplashControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.FAVOURITE,
+      page: () => const FavouriteScreen(),
+      binding: FavouriteControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.BASE,
+      page: () => const BaseScreen(),
+      binding: BaseControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.WALLPAPER_DETAIL,
+      page: () => const WallpaperDetailScreen(),
+      binding: WallpaperDetailControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.WALLPAPER_CATEGORY,
+      page: () => const WallpaperCategoryScreen(),
+      binding: WallpaperCategoryControllerBinding(),
     ),
   ];
 }
